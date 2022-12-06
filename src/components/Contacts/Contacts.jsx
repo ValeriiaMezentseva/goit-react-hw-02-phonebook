@@ -26,6 +26,10 @@ const ContactsList = ({ contacts, onDeleteClick }) => {
 export default ContactsList; 
 
 ContactsList.propTypes = { 
-    contacts: PropTypes.arrayOf(PropTypes.object), 
-    onDeleteClick: PropTypes.func, 
+    contacts: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired, 
+        number: PropTypes.string.isRequired,
+    })), 
+    onDeleteClick: PropTypes.func.isRequired, 
 }

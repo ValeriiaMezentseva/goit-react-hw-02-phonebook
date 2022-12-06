@@ -76,8 +76,10 @@ export default ContactsForm;
 
 ContactsForm.propTypes = {
     addContact: PropTypes.func.isRequired,
-    contacts: PropTypes.array.isRequired,
-    toggle: PropTypes.func, 
+    contacts: PropTypes.arrayOf(PropTypes.shape({name: PropTypes.string.isRequired})).isRequired,
+    toggle: PropTypes.func.isRequired, 
+    isOpenContacts: PropTypes.bool.isRequired, 
+    isOpenFilter: PropTypes.bool.isRequired,
 };
  
 

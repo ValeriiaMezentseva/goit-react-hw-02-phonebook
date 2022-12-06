@@ -13,6 +13,6 @@ const Filter = ({ onSearch, value }) => {
 export default Filter; 
 
 Filter.propTypes = {
-    onSearch: PropTypes.func,
-    value: PropTypes.string,
+    onSearch: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired,
 };
